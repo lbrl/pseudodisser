@@ -1,0 +1,188 @@
+\documentclass[14pt,a4paper]{extarticle}
+\usepackage[utf8]{inputenc}
+%koi8-r]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage[hypcap]{subcaption}
+
+\usepackage{float} % Required for specifying the exact location of a figure or table
+
+\usepackage{placeins}
+
+% \usepackage[backend=bibtex, style=numeric, sorting=none, maxnames=3, minnames=3, hyperref=true, url=false, isbn=false, backref=true]{biblatex}
+% \usepackage[backend=bibtex]{biblatex}
+% \bibliography{sample}
+\usepackage[style=alphabetic, maxnames=4, minnames=4]{biblatex}
+\renewcommand*{\bibfont}{\footnotesize}
+%  \bibliography{sample}
+\addbibresource{mybib.bib}
+
+\usepackage{graphicx} % Required for the inclusion of images
+% \usepackage[hypcap]{subcaption}
+\usepackage[font=small]{caption}
+
+\usepackage{textcomp}
+\usepackage[version=4]{mhchem}
+% \usepackage{translator}
+
+\usepackage{tabulary}
+
+% \usepackage{cleveref}
+\usepackage[colorlinks=true, linkcolor=Maroon, citecolor=OliveGreen]{hyperref}
+
+% \hyphenation{элек-трон-пози-трон-ны-ми}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{commath}
+
+% \newcommand{\fref}[1]{Рис.~\ref{#1}}
+% \newcommand{\tref}[1]{Таб.~\ref{#1}}
+% \newcommand{\eref}[1]{(\ref{#1})}
+
+\newcommand*\rot{\rotatebox{90}}
+
+\usepackage[separate-uncertainty = true, multi-part-units=single,
+range-phrase=\text{\,--\,}, range-units=single,
+per-mode = symbol]{siunitx}
+\input{siunitx_ru.tex}
+\DeclareSIUnit\clight{\text{\ensuremath{c}}}
+
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+
+% \topmargin -20 mm
+% \oddsidemargin 5 mm
+% \textheight 250 mm
+% \textwidth 160 mm
+
+
+\usepackage[height=25cm, a4paper, hmargin={25mm, 10mm}, vmargin={2cm, 2cm}]{geometry}
+
+
+
+\title{Отчёт по научно исследовательской--практике}% Title
+
+\author{Георгий Павлович \textsc{Разуваев}\\{\smallаспирант 3-го года обучения ИЯФ им. Г.\,И.\,Будкера, СО РАН}} % Author name
+% \author{}
+
+\date{26 января 2017\,г.} % Date for the report
+
+\begin{document}
+
+% \maketitle % Insert the title, author and date
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+\begin{center}
+
+Федеральное Агентство Научных Организаций
+
+\vspace{.5cm}
+
+ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ \\
+ИНСТИТУТ ЯДЕРНОЙ ФИЗИКИ ИМ. Г.\,И.~БУДКЕРА \\
+СИБИРСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК
+
+\vspace{2cm}
+
+ОТЧЁТ \\
+О НАУЧНО-ИССЛЕДОВАТЕЛЬСКОЙ РАБОТЕ \\
+ЗА VII СЕМЕСТР ОБУЧЕНИЯ В АСПИРАНТУРЕ
+
+\vspace{1.5cm}
+
+\boldmath
+\textbf{Измерения сечения реакции
+$e^+ e^- \to \eta \gamma, \, \pi^0 \gamma \to 3 \gamma$\\
+с детектором КМД-3 на коллайдере ВЭПП-2000}
+\unboldmath
+
+
+\end{center}
+
+\vspace{2cm}
+
+\underline{Специальность:} 01.04.16 Физика атомного ядра и элементарных частиц
+
+\vspace{.5cm}
+
+\underline{Тема научных исследований в аспирантуре:} Изучения реакции $e^+ e^- \to \eta \gamma, \, \pi^0 \gamma \to 3 \gamma$ в диапазоне энергий \SIrange{.6}{2.}{\GeVr}
+
+\vspace{2cm}
+
+\begin{minipage}[t]{0.5\textwidth}
+\hspace{3cm}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+Оценка \underline{\hspace{3cm}}
+\end{minipage}
+
+
+\vspace{1cm}
+
+\begin{minipage}[t]{0.5\textwidth}
+Научный руководитель
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\underline{\hspace{3cm}} д.\,ф.-м.\,н. Б.\,А.~Шварц
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}[t]{0.5\textwidth}
+Аспирант
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\underline{\hspace{3cm}} Г.\,П.~Разуваев
+\end{minipage}
+
+\vfill
+
+\begin{center}
+    Новосибирск 2018
+\end{center}
+
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\input{intro.tex}
+
+\newpage
+\section{Эксперимент}
+
+\input{vepp.tex}
+
+\newpage
+\input{cmd3.tex}
+
+\newpage
+\input{eePg.tex}
+
+\newpage
+\input{conclusion.tex}
+
+% \section{Заключение}
+
+% Список упомянутых тем уже не мал, да может быть ещё расширен.
+% В целом измерение сечения процессов $e^+e^- \to \eta \gamma$ и $e^+e^- \to \pi^0 \gamma$ представляются интересной задачей, определённо имеющая своё место в физике высоких энергий.
+
+\newpage
+% \bibliographystyle{plain}
+\printbibliography
+
+% \bibliography{sample}
+
+\end{document}
+
+
