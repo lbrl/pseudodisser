@@ -86,8 +86,8 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 изничтожив современную парадигму науки --- Стандартную Модель. Некоторые
 из них ищут Новую Физику пробуя другие области энергии и массы, кто-то
 ищет новые распады, другие же могут мерить что-то очень точно и
-сравнивать это с предсказаниями теории. К последней группе относится
-изучение аномального магнитного момента мюона.
+сравнивать это с предсказаниями теории.
+К последней группе относится изучение аномального магнитного момента мюона.
 
 \subsubsection{История}\label{g-2-history}
 
@@ -123,8 +123,12 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 			\vertex [below right = 18.8562mm of b] (c2);
 			\vertex [below left = 28.2843mm of b] (d1);
 			\vertex [below right = 28.2843mm of b] (d2);
+			\vertex [below right = 0mm of d1] {$\mu$};
+			\vertex [below left = 0mm of d2] {$\mu$};
+			% \node [below = of d1] {$\mu$};
 			\vertex [right = 9.3333mm of c1, blob] (c3) {};
 			% \vertex [right = 8mm of c3] (c4);
+			\vertex [below right = 0mm of a] {$\gamma$};
 		    
 		    \diagram* [small] {
 			    (a) -- [photon] (b),
@@ -135,7 +139,7 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 		\end{feynman}
 		\end{tikzpicture}
         \label{diag:hvp}
-        \caption{АПВ.}
+        \caption{Ведущий адронный вклад в $a_\mu$.}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -150,6 +154,9 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 			\vertex [below right = 28.2843mm of b] (d2);
 			\vertex [right = 7.3333mm of c1, dot, blue] (c3) {};
 			\vertex [right = 12mm of c3, dot, blue] (c4) {};
+			\vertex [below right = 0mm of d1] {$\mu$};
+			\vertex [below left = 0mm of d2] {$\mu$};
+			\vertex [below right = 0mm of a] {$\gamma$};
 		    
 		    \diagram* [small] {
 			    (a) -- [photon] (b),
@@ -161,7 +168,7 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 		\end{feynman}
 		\end{tikzpicture}
         \label{diag:hvp_Pg}
-        \caption{АПВ.}
+        \caption{Ведущий адронный вклад в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -169,8 +176,9 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
         \begin{tikzpicture}
 		\begin{feynman}
 			\vertex (a);
+			\vertex [below = 7mm of a, blob] (a1) {};
 			\vertex [below = 1cm of a] (b);
-			\vertex [below = 6mm of a, blob] (a1) {};
+			% \vertex [below = 7mm of a, blob] (a1) {};
 			\vertex [below left = 17.2132mm of b] (c1);
 			\vertex [below left = 4mm of b] (b1);
 			\vertex [below = 4mm of b] (b2);
@@ -181,18 +189,21 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 			\vertex [below right = 17.2132mm of b] (c3);
 			\vertex [below left = 7.0711mm of c1] (d1);
 			\vertex [below right = 7.0711mm of c3] (d2);
+			\vertex [below right = 0mm of d1] {$\mu$};
+			\vertex [below left = 0mm of d2] {$\mu$};
+			\vertex [below right = 0mm of a] {$\gamma$};
 		    
 		    \diagram* [small] {
 			    (a) -- [photon] (a1),
 			    (b1) -- [photon] (c1),
 			    (b3) -- [photon] (c3),
-			    (d1) -- (c1) -- (c2) -- (c3) -- (d2),
+			    (d1) -- [fermion] (c1) -- [fermion] (c2) -- [fermion] (c3) -- [fermion] (d2),
 			    (b2) -- [photon] (c2),
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
         \label{diag:lbl}
-        \caption{АПВ.}
+        \caption{Ведущий адронный вклад света на свете в $a_\mu$.}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -207,6 +218,9 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 			\vertex [below right = 21.2132mm of b] (d3);
 			\vertex [below left = 28.2843mm of b] (e1);
 			\vertex [below right = 28.2843mm of b] (e2);
+			\vertex [below right = 0mm of e1] {$\mu$};
+			\vertex [below left = 0mm of e2] {$\mu$};
+			\vertex [below right = 0mm of a] {$\gamma$};
 					    
 		    \diagram* [small] {
 			    (a) -- [photon] (b),
@@ -214,12 +228,12 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 			    (c) -- [photon] (d1),
 			    (c) -- [photon] (d2),
 			    (b) -- [photon] (d3),
-			    (e1) -- (d1) -- (d2) -- (d3) -- (e2),
+			    (e1) -- [fermion] (d1) -- [fermion] (d2) -- [fermion] (d3) -- [fermion] (e2),
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
         \label{diag:lbl_Pg}
-        \caption{АПВ.}
+        \caption{Ведущий адронный вклад света на свете в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}
     \end{minipage}
 \end{figure}
 
