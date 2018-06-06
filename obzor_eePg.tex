@@ -113,23 +113,24 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 диаграммы рассеяния света на свете.
 
 \begin{figure}[htbp]
-    \begin{minipage}[t]{0.25\textwidth}
+    \begin{minipage}[t]{0.24\textwidth}
         \centering
         \begin{tikzpicture}
-		\begin{feynman}
+        \begin{feynman}
 			\vertex (a);
 			\vertex [below = 1cm of a] (b);
-			\vertex [below left = 15mm of b] (c1);
-			\vertex [below right = 15mm of b] (c2);
-			\vertex [below left = 1cm of c1] (d1);
-			\vertex [below right = 1cm of c2] (d2);
-			\vertex [right = 6.606mm of c1, blob] (c3) {};
-			% \vertex [right = of c3] (c4);
+			\vertex [below left = 18.8562mm of b] (c1);
+			\vertex [below right = 18.8562mm of b] (c2);
+			\vertex [below left = 28.2843mm of b] (d1);
+			\vertex [below right = 28.2843mm of b] (d2);
+			\vertex [right = 9.3333mm of c1, blob] (c3) {};
+			% \vertex [right = 8mm of c3] (c4);
 		    
 		    \diagram* [small] {
 			    (a) -- [photon] (b),
 			    (d1) -- [fermion] (c1) -- [fermion] (b) -- [fermion] (c2) -- [fermion] (d2),
 		    	(c1) -- [photon] (c3) -- [photon] (c2),
+		    	% (c4) -- [photon] (c2),
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
@@ -137,27 +138,87 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
         \caption{АПВ.}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.25\textwidth}
+    \begin{minipage}[t]{0.24\textwidth}
         \centering
         \begin{tikzpicture}
 		\begin{feynman}
 			\vertex (a);
 			\vertex [below = 1cm of a] (b);
-			\vertex [below left = 14.1421356mm of b] (c1);
-			\vertex [below = 10mm of b] (c2);
-			\vertex [below right = 14.1421356mm of b] (c3);
-			\vertex [below left = 14.1421356mm of c1] (d1);
-			\vertex [below right = 14.1421356mm of c3] (d2);
+			\vertex [below left = 18.8562mm of b] (c1);
+			\vertex [below right = 18.8562mm of b] (c2);
+			\vertex [below left = 28.2843mm of b] (d1);
+			\vertex [below right = 28.2843mm of b] (d2);
+			\vertex [right = 7.3333mm of c1, dot, blue] (c3) {};
+			\vertex [right = 12mm of c3, dot, blue] (c4) {};
 		    
 		    \diagram* [small] {
 			    (a) -- [photon] (b),
-			    (c1) -- [photon] b [blob] -- [photon] (c2),
-			    (b) -- [photon] (c3),
+			    (d1) -- [fermion] (c1) -- [fermion] (b) -- [fermion] (c2) -- [fermion] (d2),
+		    	(c1) -- [photon] (c3),
+		    	(c4) -- [photon] (c2),
+		    	(c3) -- [photon, half left] (c4) -- [scalar, blue, very thick, half left, edge label={\(\pi^{0}\), \(\eta\)}] (c3),
+		 	};
+		\end{feynman}
+		\end{tikzpicture}
+        \label{diag:hvp_Pg}
+        \caption{АПВ.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.24\textwidth}
+        \centering
+        \begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [below = 1cm of a] (b);
+			\vertex [below = 6mm of a, blob] (a1) {};
+			\vertex [below left = 17.2132mm of b] (c1);
+			\vertex [below left = 4mm of b] (b1);
+			\vertex [below = 4mm of b] (b2);
+			\vertex [below right = 4mm of b] (b3);
+			% \vertex [below = 11mm of b] (c2);
+			% \vertex [right = 15mm of c1] (c2);
+			\vertex [below = 12mm of b] (c2);
+			\vertex [below right = 17.2132mm of b] (c3);
+			\vertex [below left = 7.0711mm of c1] (d1);
+			\vertex [below right = 7.0711mm of c3] (d2);
+		    
+		    \diagram* [small] {
+			    (a) -- [photon] (a1),
+			    (b1) -- [photon] (c1),
+			    (b3) -- [photon] (c3),
 			    (d1) -- (c1) -- (c2) -- (c3) -- (d2),
+			    (b2) -- [photon] (c2),
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
         \label{diag:lbl}
+        \caption{АПВ.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.24\textwidth}
+        \centering
+        \begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [below = 1cm of a, dot, blue] (b) {};
+			\vertex [below left = 10.6066mm of b, dot, blue] (c) {};
+			\vertex [below left = 10.6066mm of c] (d1);
+			\vertex [right = 15mm of d1] (d2);
+			\vertex [below right = 21.2132mm of b] (d3);
+			\vertex [below left = 28.2843mm of b] (e1);
+			\vertex [below right = 28.2843mm of b] (e2);
+					    
+		    \diagram* [small] {
+			    (a) -- [photon] (b),
+			    (b) -- [scalar, very thick, blue, edge label'={\(\pi^{0}\), \(\eta\)}] (c),
+			    (c) -- [photon] (d1),
+			    (c) -- [photon] (d2),
+			    (b) -- [photon] (d3),
+			    (e1) -- (d1) -- (d2) -- (d3) -- (e2),
+		 	};
+		\end{feynman}
+		\end{tikzpicture}
+        \label{diag:lbl_Pg}
         \caption{АПВ.}
     \end{minipage}
 \end{figure}
