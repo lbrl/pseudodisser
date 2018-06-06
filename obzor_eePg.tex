@@ -112,24 +112,56 @@ $\phi \to \pi^0 \gamma$ распада. Нерезонансная амплит�
 Отдельно выделяют так называемые
 диаграммы рассеяния света на свете.
 
-\begin{tikzpicture}
-	\begin{feynman}
-		\vertex (a);
-		\vertex [below = 1cm of a] (b);
-		\vertex [below left = 15mm of b] (c1);
-		\vertex [below right = 15mm of b] (c2);
-		\vertex [below left = 1cm of c1] (d1);
-		\vertex [below right = 1cm of c2] (d2);
-		\vertex [right = 1.0606cm of c1, blob] (c3) {};
-		% \vertex [right = of c3] (c4);
+\begin{figure}[htbp]
+    \begin{minipage}[t]{0.25\textwidth}
+        \centering
+        \begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [below = 1cm of a] (b);
+			\vertex [below left = 15mm of b] (c1);
+			\vertex [below right = 15mm of b] (c2);
+			\vertex [below left = 1cm of c1] (d1);
+			\vertex [below right = 1cm of c2] (d2);
+			\vertex [right = 6.606mm of c1, blob] (c3) {};
+			% \vertex [right = of c3] (c4);
 		    
-	    \diagram* [small] {
-		    (a) -- [photon] (b),
-		    (d1) -- [fermion] (c1) -- [fermion] (b) -- [fermion] (c2) -- [fermion] (d2),
-		    (c1) -- [photon] (c3) -- [photon] (c2),
-	 	};
-	\end{feynman}
-\end{tikzpicture}
+		    \diagram* [small] {
+			    (a) -- [photon] (b),
+			    (d1) -- [fermion] (c1) -- [fermion] (b) -- [fermion] (c2) -- [fermion] (d2),
+		    	(c1) -- [photon] (c3) -- [photon] (c2),
+		 	};
+		\end{feynman}
+		\end{tikzpicture}
+        \label{diag:hvp}
+        \caption{АПВ.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.25\textwidth}
+        \centering
+        \begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [below = 1cm of a] (b);
+			\vertex [below left = 14.1421356mm of b] (c1);
+			\vertex [below = 10mm of b] (c2);
+			\vertex [below right = 14.1421356mm of b] (c3);
+			\vertex [below left = 14.1421356mm of c1] (d1);
+			\vertex [below right = 14.1421356mm of c3] (d2);
+		    
+		    \diagram* [small] {
+			    (a) -- [photon] (b),
+			    (c1) -- [photon] b [blob] -- [photon] (c2),
+			    (b) -- [photon] (c3),
+			    (d1) -- (c1) -- (c2) -- (c3) -- (d2),
+		 	};
+		\end{feynman}
+		\end{tikzpicture}
+        \label{diag:lbl}
+        \caption{АПВ.}
+    \end{minipage}
+\end{figure}
+
 
 Изучаемые процессы интересны для всех типов вкладов в $a_\mu^{had}$. 
 
