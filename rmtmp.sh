@@ -7,4 +7,4 @@ rm -rf *.run.xml
 rm -rf *.toc
 rm -rf *.bbl
 rm -rf *.blg
-
+rm -rf main.out
