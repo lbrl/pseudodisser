@@ -140,8 +140,7 @@ $a_\mu^{\text{had}}$ --- вклад сильных взаимодействий.
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
-        \label{diag:hvp}
-        \caption{Ведущий адронный вклад в $a_\mu$.}
+        \caption{Ведущий адронный вклад в $a_\mu$.}\label{diag:hvp}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -169,8 +168,7 @@ $a_\mu^{\text{had}}$ --- вклад сильных взаимодействий.
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
-        \label{diag:hvp_Pg}
-        \caption{Ведущий адронный вклад в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}
+        \caption{Ведущий адронный вклад в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}\label{diag:hvp_Pg}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -204,8 +202,7 @@ $a_\mu^{\text{had}}$ --- вклад сильных взаимодействий.
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
-        \label{diag:lbl}
-        \caption{Ведущий адронный вклад света на свете в $a_\mu$.}
+        \caption{Ведущий адронный вклад света на свете в $a_\mu$.}\label{diag:lbl}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.24\textwidth}
@@ -234,8 +231,7 @@ $a_\mu^{\text{had}}$ --- вклад сильных взаимодействий.
 		 	};
 		\end{feynman}
 		\end{tikzpicture}
-        \label{diag:lbl_Pg}
-        \caption{Ведущий адронный вклад света на свете в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}
+        \caption{Ведущий адронный вклад света на свете в $a_\mu$ связанный с $e^+ e^- \to ( \pi^0, \, \eta ) \gamma$.}\label{diag:lbl_Pg}
     \end{minipage}
 \end{figure}
 В свою очередь во вкладе сильных взаимодействий принято выделять три слагаемых:
@@ -344,33 +340,42 @@ $e^+ e^- \to \gamma^* \to \text{hadrons}$
 	\caption{Вклад в $a_\mu^{\text{had, LO}}$ и $\Delta \alpha_{\text{had}} ({M_Z}^2) $ процесса 
 		$e^+ e^- \to \pi^0 \gamma$.}\label{tab:amm_pi0g}
 	\begin{tabular}{ccccc}
-		Энергия, \si{\GeVr} & $a_\mu^{\text{had, LO}}$ & $\Delta \alpha_{\text{had}} ({M_Z}^2) $ & Источник & Комментарий \\
+		Энергия, \si{\GeVr} & $a_\mu^{\text{had, LO}}$ & $\Delta \alpha_{\text{had}} ({M_Z}^2) $ & Источник \\
 		\hline
-		$m_\pi \leq \sqrt{s} \leq 0.600 $ & \num{0.12 \pm 0.01} & \num{0.00 \pm 0.00} & \cite{KNT18} & Хиральная теория \\
-		$0.600 \leq \sqrt{s} \leq 1.350 $ & \num{4.46 \pm 0.10} & \num{0.36 \pm 0.01} & \cite{KNT18} & Данные \\
-		 & $4.29 \pm 0.06 \pm 0.04 \pm 0.07$ & $0.35 \pm 0.00 \pm 0.00 \pm 0.01$ & \cite{Davier:2017zfy} & 
+		$[m_\pi , \, 0.6]$ & \num{0.12 \pm 0.01} & \num{0.00 \pm 0.00} & \cite{KNT18} \\
+		$[0.6 , \, 1.350]$ & \num{4.46 \pm 0.10} & \num{0.36 \pm 0.01} & \cite{KNT18} \\
+		$[m_\pi , \, 1.8]$ & $4.29 \pm 0.06 \pm 0.04 \pm 0.07$ & $0.35 \pm 0.00 \pm 0.00 \pm 0.01$ & \cite{Davier:2017zfy} \\
+		$[0.318 , \, 2]$ & \num{4.06 \pm 0.16} & \num{0.35 \pm 0.01} & \cite{Jegerlehner:2017gek}
 	\end{tabular}
 \end{table}
 
 \begin{table}
 	\centering
 	\caption{Вклад в $a_\mu^{\text{had, LO}}$ и $\Delta \alpha_{\text{had}} ({M_Z}^2) $ процесса 
-		$e^+ e^- \to \pi^0 \gamma$.}\label{tab:amm_etag}
-	\begin{tabular}{ccccc}
-		Энергия, \si{\GeVr} & $a_\mu^{\text{had, LO}}$ & $\Delta \alpha_{\text{had}} ({M_Z}^2) $ & Источник & Комментарий \\
+		$e^+ e^- \to \eta \gamma$.}\label{tab:amm_etag}
+	\begin{tabular}{cccc}
+		Энергия, \si{\GeVr} & $a_\mu^{\text{had, LO}}$ & $\Delta \alpha_{\text{had}} ({M_Z}^2) $ & Источник \\
 		\hline
-		$m_\pi \leq \sqrt{s} \leq 0.600 $ & \num{0.12 \pm 0.01} & \num{0.00 \pm 0.00} & \cite{KNT18} & Хиральная теория \\
-		$0.600 \leq \sqrt{s} \leq 1.350 $ & \num{4.46 \pm 0.10} & \num{0.36 \pm 0.01} & \cite{KNT18} & \\
-		 & $0.65 \pm 0.02 \pm 0.01 \pm 0.01$ & $0.08 \pm 0.00 \pm 0.00 \pm 0.00$ & \cite{Davier:2017zfy} & 
+		$[m_\eta , \, 0.66]$ & \num{0.12 \pm 0.01} & \num{0.00 \pm 0.00} & \cite{KNT18} \\
+		$[0.66 , \, 1.35]$ & \num{4.46 \pm 0.10} & \num{0.36 \pm 0.01} & \cite{KNT18} \\
+		$[m_\eta , \, 1.8]$ & $0.65 \pm 0.02 \pm 0.01 \pm 0.01$ & $0.08 \pm 0.00 \pm 0.00 \pm 0.00$ & \cite{Davier:2017zfy} \\
+		$[0.318 , \, 2]$ & \num{0.56 \pm 0.02} & \num{0.06 \pm 0.00} & \cite{Jegerlehner:2017gek}
 	\end{tabular}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DHMZ17
-Авторы работы \cite{Davier:2017zfy} проводят
+Авторы работы \cite{Davier:2017zfy} для вычисления вкладов проводят квадратичную интерполяцию экспериментальных данных для каждого канала каждого анализа.
+Полученное приблежение используют для вычисления сечений в бинах шириной \SI{1}{\MeVr}.
+Далее в каждом бине каждого канала идёт усреднение по всем измерением.
+В случае противоречивости данных ошибка их комбинации масштабируется.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FJ17
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BDDJ12&17
+В работах \cite{Benayoun:2016krn, Jegerlehner:2017gek}
+расчёт вкладов в АРВ идёт на основе комбинации модели доминантности векторных мезонов
+с моделью нарушения скрытой локальной симметрии.
+Полученной комбинацией идёт подгонка экспериментальных данных сразу в нескольких каналах $e^+ e^-$-аннигиляции
+и спектральных функций $\tau$-лептона.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Вклад процессов $\pi^0\gamma$ и $\eta\gamma$ в адронную поляризацию вакуума согласно \cite{Hagiwara:2003da} составляют:
 \begin{align}
