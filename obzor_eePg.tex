@@ -271,9 +271,11 @@ $ E_{\text{cut}} $ --- энергия перехода от использова
 $ R_{\text{had}}^{\text{data}}(s) $ и $ R_{\text{had}}^{\text{pQCD}}(s) $ --- $R$-отношение вычисленное по экспериментальным данным и согласно КХД, соответственно:
 \begin{equation}
 	R_{\text{had}} (s) =
-   	\sigma(e^+ e^- \to \text{hadrons})
-  	/
-  	\frac{4 \pi \alpha(s)}{3 s} .
+	\frac{
+	   	\sigma(e^+ e^- \to \text{hadrons})
+  	}{
+  		\pi \alpha(s) / (3 s)
+  	}.
 \end{equation}
 Ядро интегрирования $\hat{K}(s)$ определено следующим образом
 \begin{equation}
@@ -332,7 +334,6 @@ $e^+ e^- \to \gamma^* \to \text{hadrons}$
 Внутри кластера идёт поиск центра тяжести и его ошибки путём иттерационной минимизации $\chi^2$ сечения
 представленного ломанной кривой, соединяющий центры кластеров.
 Таким образом дальнейшее интгрирование в том же линейном приближении является оптимпальным вариантом вычисления вкладов в $a_\mu^{\text{had, LO}}$.
-Полученные результаты касательно процессов $\pi^0 \gamma$ и $\eta \gamma$ приведены в таблицах~\ref{tab:amm_pi0g}, \ref{tab:amm_etag}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
@@ -392,6 +393,7 @@ $e^+ e^- \to \gamma^* \to \text{hadrons}$
 а затем вычисление вкладов в $a_\mu^{\text{had, LO}}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Результаты вышеупомянутых работ приведены в таблицах~\ref{tab:amm_pi0g} и \ref{tab:amm_etag}.
 
 
 \subsection{Структура мезонов}
@@ -412,32 +414,32 @@ $e^+ e^- \to \gamma^* \to \text{hadrons}$
 что делает их хорошим инструментом для изучения структуры мезонов в свете различных феноменологических моделей,
 например кварковой модели с $SU(3)$ или даже с $SU(6)$ симметрией.
 
-\resizebox{.3\paperwidth}{!}{%
-\begin{tikzpicture}
-	\begin{feynman}
-		%\vertex (a) {\(e^{-}\)};
-		%\vertex [below right=of a] (b);
-		%\vertex [below left=of b] (c) {\(e^{+}\)};
-		\vertex (b);
-		\vertex [above left=of b] (a) {\(e^{-}\)};
-		\vertex [below left=of b] (c) {\(e^{+}\)};
-		\vertex [right=of b, dot, blue] (d) {};
-		\vertex [above right=of d] (f1) {\(\gamma\)};
-	    \vertex [below right=of d, dot, blue] (m1) {};
-	    \vertex [above right=of m1] (f2) {\(\gamma\)};
-	    \vertex [below right=of m1] (f3) {\(\gamma\)};
-		    
-	    \diagram* [small] {
-		    (a) -- [fermion] (b) -- [fermion] (c),
-		    (b) -- [photon, edge label=\(\gamma^{*}\)] (d) [blob],
-		    (d) -- [photon] (f1),
-		    (d) -- [scalar, blue, very thick, edge label'={\(\pi^{0}\), \(\eta\), (\(\eta^\prime\))}] (m1),
-		    (f3) -- [photon] (m1) [blob] -- [photon] (f2),
-			% (m1) -- [photon] (f3),
-	 	};
-	\end{feynman}
-\end{tikzpicture}
-}
+%\resizebox{.3\paperwidth}{!}{%
+%\begin{tikzpicture}
+%	\begin{feynman}
+%		%\vertex (a) {\(e^{-}\)};
+%		%\vertex [below right=of a] (b);
+%		%\vertex [below left=of b] (c) {\(e^{+}\)};
+%		\vertex (b);
+%		\vertex [above left=of b] (a) {\(e^{-}\)};
+%		\vertex [below left=of b] (c) {\(e^{+}\)};
+%		\vertex [right=of b, dot, blue] (d) {};
+%		\vertex [above right=of d] (f1) {\(\gamma\)};
+%	    \vertex [below right=of d, dot, blue] (m1) {};
+%	    \vertex [above right=of m1] (f2) {\(\gamma\)};
+%	    \vertex [below right=of m1] (f3) {\(\gamma\)};
+%		    
+%	    \diagram* [small] {
+%		    (a) -- [fermion] (b) -- [fermion] (c),
+%		    (b) -- [photon, edge label=\(\gamma^{*}\)] (d) [blob],
+%		    (d) -- [photon] (f1),
+%		    (d) -- [scalar, blue, very thick, edge label'={\(\pi^{0}\), \(\eta\), (\(\eta^\prime\))}] (m1),
+%		    (f3) -- [photon] (m1) [blob] -- [photon] (f2),
+%			% (m1) -- [photon] (f3),
+%	 	};
+%	\end{feynman}
+%\end{tikzpicture}
+%}
 
 Особый интерес представляют структуры мезонов $\eta$ и $\eta^\prime$, так как в них допускается наличия вкладов $c\bar{c}$-кварков или примесь глюонов. 
 

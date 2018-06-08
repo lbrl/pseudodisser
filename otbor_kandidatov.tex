@@ -1,6 +1,43 @@
 \subsection{Отбор событий}
 
-Отбор разбивается на несколько шагов. В начале пути отбираются полностью нейтральные события с тремя и более фотонами.
+Изучаемые процессы $e^+ e^- \to P \gamma$ после распада псевдоскалярного мезона $P$
+в конечном состоянии представляют собой три фотона (см. диаграмму~\ref{diag:ee_to_Pg}).
+Основной фон во всей области доступных энергий $\sqrt{s}$,
+представленной трёхквантовой аннигяляций,
+невозможно полностью подавить,
+что приводит к необходимости статистического выделения событий сигнала.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}
+		\begin{feynman}
+	    	%\vertex (a) {\(e^{-}\)};
+		    %\vertex [below right=of a] (b);
+		    %\vertex [below left=of b] (c) {\(e^{+}\)};
+		    \vertex (b);
+		    \vertex [above left=of b] (a) {\(e^{-}\)};
+		    \vertex [below left=of b] (c) {\(e^{+}\)};
+		    \vertex [right=of b, dot, blue] (d) {};
+		    \vertex [above right=of d] (f1) {\(\gamma\)};
+		    \vertex [below right=of d, dot, blue] (m1) {};
+		    \vertex [above right=of m1] (f2) {\(\gamma\)};
+		    \vertex [below right=of m1] (f3) {\(\gamma\)};
+				    
+		    \diagram* [small] {
+			    (a) -- [fermion] (b) -- [fermion] (c),
+			    (b) -- [photon, edge label=\(\gamma^{*}\)] (d) [blob],
+			    (d) -- [photon] (f1),
+			    (d) -- [scalar, blue, very thick, edge label'={\(\pi^{0}\), \(\eta\)}] (m1),
+			    (f3) -- [photon] (m1) [blob] -- [photon] (f2),
+			   % (m1) -- [photon] (f3),
+	    	};
+		\end{feynman}
+	\end{tikzpicture}
+	\caption{Древесная диаграмма изучаемых процессов.}\label{diag:ee_to_Pg}
+\end{figure}
+
+Отбор разбивается на несколько шагов.
+В начале пути отбираются полностью нейтральные события с тремя и более фотонами.
 Причём от каждого фотона требуется, чтобы его энергия была больше \SI{30}{\MeVr} и полярный угол не тяготеет к вакуумной трубе.
 Для таких событий вычисляется полная энергия $E_{\text{tot}}$ и импульс $P_{\text{tot}}$ системы частиц.
 Характерное распределение представлено на рисунке~\ref{fig:EtvsPt5095}.
@@ -16,7 +53,7 @@
 к которой относится конкретное событие.
 Хвост уходящий вниз, наоборот свидетельствует о недостатке энергии-импульса в системе.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\label{fig:EtvsPt5095}
 	\includegraphics[width=.5\textwidth]{img/EtvsPt5095.png}
