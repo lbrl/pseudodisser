@@ -52,86 +52,86 @@ $e^+ e^- \to \pi^+ \pi^- \pi^0 \to \pi^+ \pi^- 2 \gamma$.
 \paragraph{Отбор событий $e^+ e^- \to \pi^+ \pi^- \pi^0$}
 
 На первом этапе отбираются события с двумя центральными треками и с одним или двумя фотонами.
-Так же требуется, чтобы флаг is\_bhabha не равнялся 1.
+% Так же требуется, чтобы флаг is\_bhabha не равнялся 1.
 От трека требуется наличие кластера с полярным углом удовлетворяющем условию $0.9 < \theta < \pi - 0.9$.
 
-Для треков определяется отношение энерговыделения к импульсу и
+Для треков определяется отношение энерговыделения $E_{\text{dep}}$ к импульсу $p$ и
 требуется,
-чтобы каждое $E_{dep} / p$ лежало в диапазоне $(0.1, \, 2)$.
+чтобы каждое $E_{\text{dep}} / p$ лежало в диапазоне $(0.1, \, 2)$.
 
 На каждый фотон накладываются условия:
 \begin{itemize}
     \item $| \theta - \pi/2| < 1.4 \approx \ang{80.214}$,
     \item $\SI{15}{\MeVr} < E < 0.75 \sqrt{s}$.
 \end{itemize}
-После этого должно остаться один или два фотона, чтобы событие осталось в обработке.
+Такой отбор должно пройти один или два фотона, чтобы событие осталось в обработке.
 
-Для отобранных частиц вычисляется модуль полного импульса системы $P_{tot}$ и полная энергия $E_{tot}$:
+Для отобранных частиц вычисляется модуль полного импульса системы $P_{\text{tot}}$ и полная энергия $E_{\text{tot}}$:
 \begin{align}
-    E_{tot} &= \sum E_i , \\
-    P_{tot} &= \left| \vec{P}_{tot} \right| = \left| \sum \vec{p}_i \right| .
+    E_{\text{tot}} &= \sum E_i , \\
+    P_{\text{tot}} &= \left| \vec{P}_{\text{tot}} \right| = \left| \sum \vec{p}_i \right| .
 \end{align}
-На ни накладываются следующие условия:
+На них накладываются следующие условия:
 \begin{itemize}
-    \item $P_{tot} < 0.75 \sqrt{s}$,
-    \item $0.25 \sqrt{s} < E_{tot} < 1.75 \sqrt{s}$.
+    \item $P_{\text{tot}} < 0.75 \sqrt{s}$,
+    \item $0.25 \sqrt{s} < E_{\text{tot}} < 1.75 \sqrt{s}$.
 \end{itemize}
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/h2f_EtPt.png}
         \caption{Полный вид.}
-        \label{fig:EtPt_full}
+        \label{fig:3pi_EtPt_full}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/h2f_EtPt_zoom.png}
         \caption{Область выбора приближена.}
-        \label{fig:EtPt_zoom}
+        \label{fig:3pi_EtPt_zoom}
     \end{subfigure}
     \caption{Распределение полной энергии и полного импульса системы,
         нормированные на $\sqrt{s}$.
         Красной линией обозначены условия отбора.
         Экспериментальные данные сезона $2013 \, \rho$,
-        $E_{beam} = \SI{389}{\MeVr}$.}\label{fig:EtPt}
+        $E_{\text{beam}} = \SI{389}{\MeVr}$.}\label{fig:3pi_EtPt}
 \end{figure}
 
 Для прошедших отборы событий проводится кинематическая реконструкция в гипотезе четырёх частиц (двух заряженных пионов и двух фотонов) с требованием выполнения законов сохранения импульса-энергии для всей системы.
-Таким образом после кинематической реконструкции суммарный импульс системы $P^{KF}_{tot}$ стремится к нулю,
-а общая энергия системы $E^{KF}_{tot}$ к энергии двух пучков.
+Таким образом после кинематической реконструкции суммарный импульс системы $P^{\text{KF}}_{\text{tot}}$ стремится к нулю,
+а общая энергия системы $E^{KF}_{\text{tot}}$ к энергии двух пучков.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/diff_kf_mpi0_2013rho389.png}
-        \caption{Данные сезона $2013 \, \rho$, $E_{beam} = \SI{389}{\MeVr}$.}
-        \label{fig:diff_kf_mpi0_2013rho389}
+        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}
+        \label{fig:3pi_diff_kf_mpi0_2013rho389}
     \end{subfigure}
     ~
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/diff_kf_mpi0_sim391_54.png}
-        \caption{Моделирование $e^+ e^- \to \pi^+ \pi^- \pi^0$, $E_{beam} = \SI{391.54}{\MeVr}$.}
-        \label{fig:diff_kf_mpi0_sim391_54}
+        \caption{Моделирование $e^+ e^- \to \pi^+ \pi^- \pi^0$, $E_{\text{beam}} = \SI{391.54}{\MeVr}$.}
+        \label{fig:3pi_diff_kf_mpi0_sim391_54}
     \end{subfigure}
     \caption{Распределение событий по квадрату инвариантной массы двух фотонов для событий с двумя и более фотонами.
-    Красная (синяя) гистограмма --- до (после) кинематической реконструкции.}\label{fig:diff_kf_mpi0}
+    Красная (синяя) гистограмма --- до (после) кинематической реконструкции.}\label{fig:3pi_diff_kf_mpi0}
 \end{figure}
 
  
-Второй этап отборов начинается с требования на массу отдачи двух заряженных пионов $M_{recoil}^{\pi^+ \pi^-}$,
-а именно $\SI{0}{\MeVr} < M_{recoil}^{\pi^+ \pi^-} < \SI{300}{\MeVr}$.
+Второй этап отборов начинается с требования на массу отдачи двух заряженных пионов $M_{\text{recoil}}^{\pi^+ \pi^-}$,
+а именно $\SI{0}{\MeVr} < M_{\text{recoil}}^{\pi^+ \pi^-} < \SI{300}{\MeVr}$.
 Дополнительно для треков накладывается условие
 % $ 0.1 < E_1/p_1 , \, E_2/p_2 < 2 $.
 $ E_1/p_1 + E_2 / p_2 < 1$
 и $\min(E_i / p_i) > 0.1$.
 В то время как на угол между треками $\Omega_{\pi^+ \pi^-}$ накладывается условие $\Omega_{\pi^+ \pi^-} < 2.95$.
-Данное условие продемонстрировано на рисунках~\ref{fig:raskl}.
+Данное условие продемонстрировано на рисунках~\ref{fig:3pi_raskl}.
 \begin{figure}
     \begin{minipage}[t]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/h2f_EPmaxmin_zoom.png}
         \caption{Распределение отношения энерговыделения трека к импульсу трека.
             Голубой линией обозначены условия отбора по $E_i / p_i$.
-            Экспериментальные данные сезона $2013 \, \rho$, $E_{beam} = \SI{394}{\MeVr}$.}
-        \label{fig:EPmaxmin_zoom}
+            Экспериментальные данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{394}{\MeVr}$.}
+        \label{fig:3pi_EPmaxmin_zoom}
     \end{minipage}
     \qquad
     \begin{minipage}[t]{0.45\textwidth}
@@ -140,8 +140,8 @@ $ E_1/p_1 + E_2 / p_2 < 1$
             синяя гистограмма --- с отбором по $E/p$,
             блеклая гистограмма --- до отбора по $E/p$,
             красная линия --- моделирование после отбора по $E/p$ и $\Omega_{\pi^+ \pi^-}$,
-            зелёно-жёлтая штрихованная линии --- условия отбора по $M_{recoil}^{\pi^+ \pi^-}$.}
-        \label{fig:mpipi}
+            зелёно-жёлтая штрихованная линии --- условия отбора по $M_{\text{recoil}}^{\pi^+ \pi^-}$.}
+        \label{fig:3pi_mpipi}
   \end{minipage}
 \end{figure}
 
@@ -150,17 +150,17 @@ $ E_1/p_1 + E_2 / p_2 < 1$
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/raskl_vs_sumEP_rho389.png}
-        \caption{Данные сезона $2013 \, \rho$, $E_{beam} = \SI{389}{\MeVr}$.}
-        \label{fig:raskl_rho389}
+        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}
+        \label{fig:3pi_raskl_rho389}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/raskl_vs_sumEP_sim391_54.png}
-        \caption{Simulation $\pi^+ \pi^- \pi^0$, $E_{beam} = \SI{391.54}{\MeVr}$.}
-        \label{fig:raskl_sim391_54}
+        \caption{Simulation $\pi^+ \pi^- \pi^0$, $E_{\text{beam}} = \SI{391.54}{\MeVr}$.}
+        \label{fig:3pi_raskl_sim391_54}
     \end{subfigure}
     \caption{Distribution of an angle between tracks $\Omega_{\pi^+ \pi^-}$ versus $E_1/p_1 + E_2 / p_2 < 1$.
-    Vertical lines represent the used cut on $\sum E_i / p_i$.}\label{fig:raskl}
+    Vertical lines represent the used cut on $\sum E_i / p_i$.}\label{fig:3pi_raskl}
 \end{figure}
 
 
