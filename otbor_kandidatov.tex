@@ -3,37 +3,70 @@
 Изучаемые процессы $e^+ e^- \to P \gamma$ после распада псевдоскалярного мезона $P$
 в конечном состоянии представляют собой три фотона (см. диаграмму~\ref{diag:ee_to_Pg}).
 Основной фон во всей области доступных энергий $\sqrt{s}$,
-представленной трёхквантовой аннигяляций,
+представленной трёхквантовой аннигяляций (см. диаграмму~\ref{diag:ee_to_3g_qed}),
 невозможно полностью подавить,
 что приводит к необходимости статистического выделения событий сигнала.
 
 \begin{figure}[htbp]
-	\centering
-	\begin{tikzpicture}
-		\begin{feynman}
-	    	%\vertex (a) {\(e^{-}\)};
-		    %\vertex [below right=of a] (b);
-		    %\vertex [below left=of b] (c) {\(e^{+}\)};
-		    \vertex (b);
-		    \vertex [above left=of b] (a) {\(e^{-}\)};
-		    \vertex [below left=of b] (c) {\(e^{+}\)};
-		    \vertex [right=of b, dot, blue] (d) {};
-		    \vertex [above right=of d] (f1) {\(\gamma\)};
-		    \vertex [below right=of d, dot, blue] (m1) {};
-		    \vertex [above right=of m1] (f2) {\(\gamma\)};
-		    \vertex [below right=of m1] (f3) {\(\gamma\)};
+	\begin{minipage}[t]{.48\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{feynman}
+	    		%\vertex (a) {\(e^{-}\)};
+		    	%\vertex [below right=of a] (b);
+			    %\vertex [below left=of b] (c) {\(e^{+}\)};
+			    \vertex (b);
+			    \vertex [above left=of b] (a) {\(e^{-}\)};
+		    	\vertex [below left=of b] (c) {\(e^{+}\)};
+			    \vertex [right=of b, dot, blue] (d) {};
+			    \vertex [above right=of d] (f1) {\(\gamma\)};
+			    \vertex [below right=of d, dot, blue] (m1) {};
+		    	\vertex [above right=of m1] (f2) {\(\gamma\)};
+			    \vertex [below right=of m1] (f3) {\(\gamma\)};
 				    
-		    \diagram* [small] {
-			    (a) -- [fermion] (b) -- [fermion] (c),
-			    (b) -- [photon, edge label=\(\gamma^{*}\)] (d) [blob],
-			    (d) -- [photon] (f1),
-			    (d) -- [scalar, blue, very thick, edge label'={\(\pi^{0}\), \(\eta\)}] (m1),
-			    (f3) -- [photon] (m1) [blob] -- [photon] (f2),
-			   % (m1) -- [photon] (f3),
-	    	};
-		\end{feynman}
-	\end{tikzpicture}
-	\caption{Древесная диаграмма изучаемых процессов.}\label{diag:ee_to_Pg}
+			    \diagram* [small] {
+				    (a) -- [fermion] (b) -- [fermion] (c),
+				    (b) -- [photon, edge label=\(\gamma^{*}\)] (d) [blob],
+			    	(d) -- [photon] (f1),
+				    (d) -- [scalar, blue, very thick, edge label'={\(\pi^{0}\), \(\eta\)}] (m1),
+				    (f3) -- [photon] (m1) [blob] -- [photon] (f2),
+				   % (m1) -- [photon] (f3),
+		    	};
+			\end{feynman}
+		\end{tikzpicture}
+		\caption{Древесная диаграмма изучаемых процессов.}\label{diag:ee_to_Pg}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.48\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{feynman}
+	    		\vertex (i1) {\(e^{-}\)};
+%	    		\vertex [below = of i1] (i2) {\(e^{+}\)};
+%	    		\vertex [right = of i1] (b1);
+%	    		\vertex [below = of b1] (b2);
+%	    		\vertex [right = of i2] (b3);
+%	    		\vertex [right = of b1] (f1) {$\gamma$};
+%	    		\vertex [right = of b2] (f2) {$\gamma$};
+%	    		\vertex [right = of b3] (f3) {$\gamma$};
+	    		\vertex [below = 20mm of i1] (i2) {\(e^{+}\)};
+	    		\vertex [right = 15mm of i1] (b1);
+	    		\vertex [below = 10mm of b1] (b2);
+	    		\vertex [right = 15mm of i2] (b3);
+	    		\vertex [right = 15mm of b1] (f1) {$\gamma$};
+	    		\vertex [right = 15mm of b2] (f2) {$\gamma$};
+	    		\vertex [right = 15mm of b3] (f3) {$\gamma$};
+				    
+			    \diagram* [small] {
+				    (i1) -- [fermion] (b1) -- [fermion] (b2) -- [fermion] (b3) -- [fermion] (i2),
+				    (b1) -- [photon] (f1),
+			    	(b2) -- [photon] (f2),
+			    	(b3) -- [photon] (f3),
+		    	};
+			\end{feynman}
+		\end{tikzpicture}
+		\caption{Диаграмма трёхквантовой аннигиляции.}\label{diag:ee_to_3g_qed}
+	\end{minipage}
 \end{figure}
 
 Отбор разбивается на несколько шагов.
