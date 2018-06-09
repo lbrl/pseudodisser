@@ -80,14 +80,12 @@ $e^+ e^- \to \pi^+ \pi^- \pi^0 \to \pi^+ \pi^- 2 \gamma$.
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/h2f_EtPt.png}
-        \caption{Полный вид.}
-        \label{fig:3pi_EtPt_full}
+        \caption{Полный вид.}\label{fig:3pi_EtPt_full}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/h2f_EtPt_zoom.png}
-        \caption{Область выбора приближена.}
-        \label{fig:3pi_EtPt_zoom}
+        \caption{Область выбора приближена.}\label{fig:3pi_EtPt_zoom}
     \end{subfigure}
     \caption{Распределение полной энергии и полного импульса системы,
         нормированные на $\sqrt{s}$.
@@ -103,8 +101,7 @@ $e^+ e^- \to \pi^+ \pi^- \pi^0 \to \pi^+ \pi^- 2 \gamma$.
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/diff_kf_mpi0_2013rho389.png}
-        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}
-        \label{fig:3pi_diff_kf_mpi0_2013rho389}
+        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}\label{fig:3pi_diff_kf_mpi0_2013rho389}
     \end{subfigure}
     ~
     \begin{subfigure}[t]{0.45\textwidth}
@@ -130,8 +127,7 @@ $ E_1/p_1 + E_2 / p_2 < 1$
         \includegraphics[width=\textwidth]{img/h2f_EPmaxmin_zoom.png}
         \caption{Распределение отношения энерговыделения трека к импульсу трека.
             Голубой линией обозначены условия отбора по $E_i / p_i$.
-            Экспериментальные данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{394}{\MeVr}$.}
-        \label{fig:3pi_EPmaxmin_zoom}
+            Экспериментальные данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{394}{\MeVr}$.}\label{fig:3pi_EPmaxmin_zoom}
     \end{minipage}
     \qquad
     \begin{minipage}[t]{0.45\textwidth}
@@ -140,8 +136,7 @@ $ E_1/p_1 + E_2 / p_2 < 1$
             синяя гистограмма --- с отбором по $E/p$,
             блеклая гистограмма --- до отбора по $E/p$,
             красная линия --- моделирование после отбора по $E/p$ и $\Omega_{\pi^+ \pi^-}$,
-            зелёно-жёлтая штрихованная линии --- условия отбора по $M_{\text{recoil}}^{\pi^+ \pi^-}$.}
-        \label{fig:3pi_mpipi}
+            зелёно-жёлтая штрихованная линии --- условия отбора по $M_{\text{recoil}}^{\pi^+ \pi^-}$.}\label{fig:3pi_mpipi}
   \end{minipage}
 \end{figure}
 
@@ -150,8 +145,7 @@ $ E_1/p_1 + E_2 / p_2 < 1$
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{img/raskl_vs_sumEP_rho389.png}
-        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}
-        \label{fig:3pi_raskl_rho389}
+        \caption{Данные сезона $2013 \, \rho$, $E_{\text{beam}} = \SI{389}{\MeVr}$.}\label{fig:3pi_raskl_rho389}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.45\textwidth}
@@ -165,6 +159,7 @@ $ E_1/p_1 + E_2 / p_2 < 1$
 \end{figure}
 
 
+
 \paragraph{Вычисление эффективности реконструкции фотонов и поправки к ней}
 
 В итоге фотоны из полученного набора тестовых событий $pi^+ \pi^- \pi^0$
@@ -174,16 +169,35 @@ $ E_1/p_1 + E_2 / p_2 < 1$
 Беря отношение в каждом бине числа зарегестрированных к с сумме потерянных и зарегистрированных
 находим эффективность регистрации фотонов
 \begin{equation}
-	\vapepsilon_{\gamma} ( \Delta \theta_i, \, \Delta E_j ) =
+	\varepsilon_{\gamma} ( \Delta \theta_i, \, \Delta E_j ) =
 	\frac{h_{\text{det}} ( \Delta \theta_i, \, \Delta E_j )
 	}{
 	h_{\text{det}} ( \Delta \theta_i, \, \Delta E_j ) + h_{\text{lost}} ( \Delta \theta_i, \, \Delta E_j )
 	} .
 \end{equation}
 Строим такие эффективности регистрации отдельно для моделирования
-$\vapepsilon_{\gamma}^{\text{MC}} ( \Delta \theta_i, \, \Delta E_j )$,
+$\varepsilon_{\gamma}^{\text{MC}} ( \Delta \theta_i, \, \allowbreak \Delta E_j )$,
 и отдельно для эксперимента
-$\vapepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \Delta E_j )$.
+$\varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \allowbreak \Delta E_j )$.
+Пример $\varepsilon_{\gamma}^{\text{exp}}$ представлен на рисунке~\ref{fig:3pi_eff_gamma}.
+
+\begin{figure}[htbp]
+    \begin{minipage}[t]{0.48\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{img/eff_scan2013_tot.png}
+        \caption{$\varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \Delta E_j )$ 
+        	по объединённые данным сезонов $2013 \, \rho$ и $2013 \, \omega / \phi$.}\label{fig:3pi_eff_gamma}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{img/ratio_2d_omphi_plus_rho.png}
+        \caption{$\varepsilon_{\gamma}^{\text{exp}} / \varepsilon_{\gamma}^{\text{MC}}$ как функция $\Delta \theta_i$ и $\Delta E_j$
+        	по объединённые данным сезонов $2013 \, \rho$ и $2013 \, \omega / \phi$.}\label{fig:3pi_eff_gamma_corr}
+    \end{minipage}
+\end{figure}
+
+
 
 
 \subsubsection{Эффективность нейтрального триггера}
