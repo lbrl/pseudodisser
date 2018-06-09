@@ -197,12 +197,21 @@ $\varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \allowbreak \Delta E_j 
     \end{minipage}
 \end{figure}
 
+Сама поправка к эффективности регистрации фотона определяется как отношение полученной эффективности в эксперименте $\varepsilon_{\gamma}^{\text{exp}}$
+и к эффективности по моделированию $\varepsilon_{\gamma}^{\text{MC}}$.
+Пример полученной поправки приведён на рисунке~\ref{fig:3pi_eff_gamma_corr}.
+Наиболле значимая поправка,
+отражающая несоответствие моделирования эксперименту,
+оказывается на внутреннех краях \ce{BGO} калориметра и в местах стыков цилиндрического и торцевого калориметров.
+
+Вычисление поправки для производится
+
 
 
 
 \subsubsection{Эффективность нейтрального триггера}
 
-Вычисление сечений изучаемых реакций требует учёта эффективности нейтрального триггера $\varepsilon_{NT}$,
+Вычисление сечений изучаемых реакций требует учёта эффективности нейтрального триггера $\varepsilon_\text{NT}$,
 которая извлекается по событиям радиационного баба рассеяния $e^+e^- \to e^+e^-\gamma$.
 
 
@@ -223,7 +232,7 @@ $\varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \allowbreak \Delta E_j 
 % что позволяет использовать особенности триггера детектора КМД-3
 % ---
 % две независимых подсистемы запуска детектора.
-Сечение процесса $e^+e^- \to e^+e^-\gamma$ плавное и достаточно велико во всей доступной области энергий.
+Сечение процесса $e^+e^- \to e^+ e^- \gamma$ плавное и достаточно велико во всей доступной области энергий.
 
 
 Отбираются события с двумя центральными треками и хотя бы одним фотоном,
@@ -248,13 +257,13 @@ $ 0.9 < \theta < \pi - 0.9 $.
 обеспечивается одним из треков,
 ввиду неэффективности восстановления треков при малых полярных углах.
 
-Затем для каждого события вычисляется полная энергия $E_{sys}$ и полный импульс $P_{sys}$ системы частиц,
+Затем для каждого события вычисляется полная энергия $E_\text{sys}$ и полный импульс $P_\text{sys}$ системы частиц,
 причём для нейтральных частиц импульс приравнивается к их энергии, а энергия заряженных частиц рассчитывается как $E = \sqrt{p^2 + {m_e}^2}$.
 Таким образом последние частицы предполагаются электронами или позитронами с массой $m_e$.
-На полный импульс $P_{sys}$ и полную энергию $E_{sys}$ полученной системы частиц накладываются нижеприведённые условия:
+На полный импульс $P_\text{sys}$ и полную энергию $E_\text{sys}$ полученной системы частиц накладываются нижеприведённые условия:
 \begin{itemize}
-    \item $P_{sys} < 0.25 \sqrt{s}$;
-    \item $\frac{2}{3} \sqrt{s} + P_{sys} < E_{sys} < 1.25 \sqrt{s}$.
+    \item $P_\text{sys} < 0.25 \sqrt{s}$;
+    \item $\frac{2}{3} \sqrt{s} + P_\text{sys} < E_\text{sys} < 1.25 \sqrt{s}$.
 \end{itemize}
 Для определения эффективности триггера отбираются события с $\min (E/p) > 0.8$ и $\max (E/p) < 2$.
 Такое условие позволяет дополнительно подавить
@@ -272,40 +281,40 @@ $ 0.9 < \theta < \pi - 0.9 $.
 \end{itemize}
 Теперь для каждой точки по энергии определяются количества событий, в которых сработал:
 \begin{itemize}
-  \item только нейтральный триггер --- $N_{NT}$;
-  \item только заряженный триггер ---  $N_{CT}$;
-  \item полный триггер --- $N_{tot}$.
+  \item только нейтральный триггер --- $N_\text{NT}$;
+  \item только заряженный триггер ---  $N_\text{CT}$;
+  \item полный триггер --- $N_\text{tot}$.
 \end{itemize}
-На основе этих данных рассчитывается эффективности нейтрального триггера $\varepsilon_{NT}$,
-заряженного триггера $\varepsilon_{CT}$ и полного триггера $\varepsilon_{tot}$.
+На основе этих данных рассчитывается эффективности нейтрального триггера $\varepsilon_\text{NT}$,
+заряженного триггера $\varepsilon_\text{CT}$ и полного триггера $\varepsilon_\text{tot}$.
 Пусть произошло $N$ событий $e^+ e^- \to e^+ e^- \gamma$,
 тогда можно записать систему уравнений:
 \begin{align}
-    N_{NT} &= \varepsilon_{NT} \cdot ( 1 - \varepsilon_{CT} ) \cdot N , \\
-    N_{CT} &= ( 1 - \varepsilon_{NT} ) \cdot \varepsilon_{CT} \cdot N , \\
-    N_{NT} &= \varepsilon_{NT} \cdot \varepsilon_{CT} \cdot N .
+    N_\text{NT} &= \varepsilon_\text{NT} \cdot ( 1 - \varepsilon_\text{CT} ) \cdot N , \\
+    N_\text{CT} &= ( 1 - \varepsilon_\text{NT} ) \cdot \varepsilon_\text{CT} \cdot N , \\
+    N_\text{NT} &= \varepsilon_\text{NT} \cdot \varepsilon_\text{CT} \cdot N .
 \end{align}
-Разрешим данные связи относительно искомых эффективностей:
+Разрешим данные связи относительно искомых эффективностей и найдём интересующие нас величины:
 \begin{align}
-    \varepsilon_{NT} &= \frac{ N_{tot} }{ N_{tot}+N_{CT} } , \\
-    \varepsilon_{CT} &= \frac{ N_{tot} }{ N_{tot}+N_{NT} } , \\
-    \varepsilon_{tot} &= 
-    \frac{ N_{tot} (N_{tot}+N_{CT}+N_{NT}) }{
-        (N_{tot}+N_{CT}) (N_{tot}+N_{NT})
+    \varepsilon_\text{NT} &= \frac{ N_\text{tot} }{ N_\text{tot}+N_\text{CT} } , \\
+    \varepsilon_\text{CT} &= \frac{ N_\text{tot} }{ N_\text{tot}+N_\text{NT} } , \\
+    \varepsilon_\text{tot} &= 
+    \frac{ N_\text{tot} (N_\text{tot}+N_\text{CT}+N_\text{NT}) }{
+        (N_\text{tot}+N_\text{CT}) (N_\text{tot}+N_\text{NT})
     } \\
     &=
-    1 - (1-\varepsilon_{NT}) (1-\varepsilon_{CT}) .
+    1 - (1-\varepsilon_\text{NT}) (1-\varepsilon_\text{CT}) .
 \end{align}
-Положив статистическую неопределённость $N_i$,
-где $i = NT, \, CT,$ и $tot$,
-равными $ \Delta N_i  = \sqrt{N_i} $ можно вычислить погрешности определения эффективностей,
-воспользовавшись формулой переноса ошибок.
-\[ \Delta  \varepsilon_{NT} = \frac{1}{ ( N_{TC} + N_T )^2} \left[ N_{TC}  N_T ( N_{TC} + N_T )
-\right]^\frac{1}{2} \]
-\[ \Delta  \varepsilon_{CT} = \frac{1}{ ( N_{TC} + N_C )^2} \left[ N_{TC}  N_C ( N_{TC} + N_C )
-\right]^\frac{1}{2} \]
-\[ \Delta  \varepsilon_{tot} =  \left[ (1-\varepsilon_{NT})^2 {\Delta  \varepsilon_{CT}}^2 +
-(1-\varepsilon_{CT})^2 {\Delta  \varepsilon_{NT}}^2 \right]^\frac{1}{2} \]
+%Положив статистическую неопределённость $N_i$,
+%где $i = NT, \, CT,$ и $tot$,
+%равными $ \Delta N_i  = \sqrt{N_i} $ можно вычислить погрешности определения эффективностей,
+%воспользовавшись формулой переноса ошибок.
+%\[ \Delta  \varepsilon_\text{NT} = \frac{1}{ ( N_{TC} + N_T )^2} \left[ N_{TC}  N_T ( N_{TC} + N_T )
+%\right]^\frac{1}{2} \]
+%\[ \Delta  \varepsilon_\text{CT} = \frac{1}{ ( N_{TC} + N_C )^2} \left[ N_{TC}  N_C ( N_{TC} + N_C )
+%\right]^\frac{1}{2} \]
+%\[ \Delta  \varepsilon_\text{tot} =  \left[ (1-\varepsilon_\text{NT})^2 {\Delta  \varepsilon_\text{CT}}^2 +
+%(1-\varepsilon_\text{CT})^2 {\Delta  \varepsilon_\text{NT}}^2 \right]^\frac{1}{2} \]
 
 Основными фоновыми процессам для $e^+ e^- \to e^+ e^-\gamma$ являются процессы
 $e^+ e^- \to \pi^+ \pi^- \gamma$ и $e^+ e^- \to \pi^+ \pi^- \pi^0 \to \pi^+ \pi^- 2\gamma$.
