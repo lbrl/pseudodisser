@@ -198,13 +198,38 @@ $\varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \allowbreak \Delta E_j 
 \end{figure}
 
 Сама поправка к эффективности регистрации фотона определяется как отношение полученной эффективности в эксперименте $\varepsilon_{\gamma}^{\text{exp}}$
-и к эффективности по моделированию $\varepsilon_{\gamma}^{\text{MC}}$.
+и к эффективности по моделированию $\varepsilon_{\gamma}^{\text{MC}}$:
+\begin{equation}
+    \kappa ( \Delta \theta_i, \, \Delta E_j )
+    =
+    \frac{
+        \varepsilon_{\gamma}^{\text{exp}} ( \Delta \theta_i, \, \Delta E_j )
+    }{
+        \varepsilon_{\gamma}^{\text{MC}} ( \Delta \theta_i, \, \Delta E_j )
+    }.
+\end{equation}
 Пример полученной поправки приведён на рисунке~\ref{fig:3pi_eff_gamma_corr}.
 Наиболле значимая поправка,
 отражающая несоответствие моделирования эксперименту,
 оказывается на внутреннех краях \ce{BGO} калориметра и в местах стыков цилиндрического и торцевого калориметров.
 
-Вычисление поправки для производится
+Вычисление поправки к конкретному процессу происходит по событиям моделирования прошедшие процедуру выделения сигналньных событий и,
+соответственно,
+послужившие для вычисления эффективности региситрации $\varepsilon_{\text{det}}$.
+По таким событиям вычисляется средний поправочный коэффициент
+\begin{equation}
+    \left\langle \kappa^3 \right\rangle
+    =
+    \frac{1}{n}
+    \sum_{i=1}^{n}
+    \left[
+        \kappa( \theta_i^{\gamma_1}, E_i^{\gamma_1} )
+        \cdot
+        \kappa( \theta_i^{\gamma_2}, E_i^{\gamma_2} )
+        \cdot
+        \kappa( \theta_i^{\gamma_3}, E_i^{\gamma_3} )
+    \right] .
+\end{equation}
 
 
 
